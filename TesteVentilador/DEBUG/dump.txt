@@ -1,0 +1,131 @@
+(* WEG Ladder Programmer V11.11 *)
+(* Copyright (C) 1999-2021 WEG. All rights reserved. *)
+
+(* ***** DEBUG INFORMATION ***** *)
+
+(* PAGE 1 *)
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1, 0, 0) Contact
+( 1, 3, 9) DUP
+( 1, 3, 9) Coil
+( 1, 2, 9) DUP
+( 1, 2, 9) Coil
+( 1, 1, 9) DUP
+( 1, 1, 9) Coil
+( 1, 0, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1, 4, 0) Contact
+( 1, 4, 1) Function Block
+( 1, 6, 9) DUP
+( 1, 6, 9) Coil
+( 1, 5, 9) DUP
+( 1, 5, 9) Coil
+( 1, 4, 9) Coil
+---------- End of Circuit
+
+(* PAGE 2 *)
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 0, 0) Contact
+( 2, 0, 1) Function Block
+( 2, 0, 4) Function Block
+( 2, 1, 9) DUP
+( 2, 1, 9) Coil
+( 2, 0, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 2, 0) Contact
+( 2, 2, 1) Function Block
+( 2, 2, 4) Function Block
+( 2, 3, 9) DUP
+( 2, 3, 9) Coil
+( 2, 2, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 4, 0) Contact
+( 2, 4, 1) Contact
+( 2, 4, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 5, 0) Contact
+( 2, 5, 1) Contact
+( 2, 5, 9) Coil
+---------- End of Circuit
+
+(* PAGE 3 *)
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 0, 0) Contact
+( 3, 0, 1) Function Block
+( 3, 2, 9) DUP
+( 3, 2, 9) Coil
+( 3, 1, 9) DUP
+( 3, 1, 9) Coil
+( 3, 0, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 3, 0) Contact
+( 3, 3, 1) Function Block
+( 3, 5, 9) DUP
+( 3, 5, 9) Coil
+( 3, 4, 9) DUP
+( 3, 4, 9) Coil
+( 3, 3, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 6, 0) Contact
+( 3,-1,-1) LD    1
+( 3, 7, 0) Contact
+( 3,-1,-1) OR    
+( 3, 6, 2) Function Block
+( 3, 9, 9) DUP
+( 3, 9, 9) Coil
+( 3, 8, 9) DUP
+( 3, 8, 9) Coil
+( 3, 7, 9) DUP
+( 3, 7, 9) Coil
+( 3, 6, 9) Coil
+---------- End of Circuit
+
+(* PAGE 4 *)
+---------- Start of Circuit
+( 4,-1,-1) LD    1
+( 4, 0, 0) Contact
+( 4, 0, 1) Function Block
+( 4, 0, 4) Function Block
+( 4, 0, 9) Coil
+---------- End of Circuit
+
+(* PAGE 5 *)
+---------- Start of Circuit
+( 5,-1,-1) LD    1
+( 5, 0, 0) Contact
+( 5, 0, 1) Function Block
+( 5, 0, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 5,-1,-1) LD    1
+( 5, 2, 0) Contact
+( 5, 2, 1) Function Block
+( 5, 2, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 5,-1,-1) LD    1
+( 5, 4, 0) Contact
+( 5, 4, 1) Function Block
+( 5, 4, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 5,-1,-1) LD    1
+( 5, 6, 0) Contact
+( 5, 6, 1) Function Block
+( 5, 6, 9) Coil
+---------- End of Circuit

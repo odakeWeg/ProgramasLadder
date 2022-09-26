@@ -1,0 +1,353 @@
+(* WEG Ladder Programmer V11.11 *)
+(* Copyright (C) 1999-2021 WEG. All rights reserved. *)
+
+(* ***** INSTRUCTION LIST ***** *)
+
+(* PAGE 1 *)
+#     New Page
+LD    %IX2
+DUP
+STS   %MX5004
+(
+Page:=01,
+Line:=03,
+Column:=09
+)
+DUP
+STR   %QX2
+(
+Page:=01,
+Line:=02,
+Column:=09
+)
+DUP
+STR   %QX1
+(
+Page:=01,
+Line:=01,
+Column:=09
+)
+STS   %MX5000
+(
+Page:=01,
+Line:=00,
+Column:=09
+)
+LD    %MX5000
+CAL   TON
+(
+PT:=1010,
+ET:=8000,
+PTMODE:=PARAMETER,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=100,
+Page:=01,
+Line:=04,
+Column:=01
+)
+DUP
+STR   %MX5005
+(
+Page:=01,
+Line:=06,
+Column:=09
+)
+DUP
+STR   %MX5004
+(
+Page:=01,
+Line:=05,
+Column:=09
+)
+STS   %MX5001
+(
+Page:=01,
+Line:=04,
+Column:=09
+)
+
+(* PAGE 2 *)
+#     New Page
+LD    %MX5004
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=CONSTANT,
+DSTMODE:=WORD_MARKER,
+SRC:=0.00000,
+DST:=8002,
+Page:=02,
+Line:=00,
+Column:=01
+)
+CAL   TON
+(
+PT:=1,
+ET:=8002,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=100,
+Page:=02,
+Line:=00,
+Column:=04
+)
+DUP
+STR   %MX5004
+(
+Page:=02,
+Line:=01,
+Column:=09
+)
+STS   %MX5005
+(
+Page:=02,
+Line:=00,
+Column:=09
+)
+LD    %MX5005
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=CONSTANT,
+DSTMODE:=WORD_MARKER,
+SRC:=0.00000,
+DST:=8003,
+Page:=02,
+Line:=02,
+Column:=01
+)
+CAL   TON
+(
+PT:=1,
+ET:=8003,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=100,
+Page:=02,
+Line:=02,
+Column:=04
+)
+DUP
+STR   %MX5005
+(
+Page:=02,
+Line:=03,
+Column:=09
+)
+STS   %MX5004
+(
+Page:=02,
+Line:=02,
+Column:=09
+)
+LD    %MX5004
+ANDN  %MX5005
+STS   %QX3
+(
+Page:=02,
+Line:=04,
+Column:=09
+)
+LD    %MX5005
+ANDN  %MX5004
+STR   %QX3
+(
+Page:=02,
+Line:=05,
+Column:=09
+)
+
+(* PAGE 3 *)
+#     New Page
+LD    %MX5001
+CAL   COMP
+(
+OPERATOR:=4,
+FORMAT:=0,
+MODE:=WORD_MARKER,
+DATA1:=8001.000000,
+MODE:=PARAMETER,
+DATA2:=1011.000000,
+Page:=03,
+Line:=00,
+Column:=01
+)
+DUP
+STS   %QX3
+(
+Page:=03,
+Line:=02,
+Column:=09
+)
+DUP
+STS   %MX5002
+(
+Page:=03,
+Line:=01,
+Column:=09
+)
+STS   %QX1
+(
+Page:=03,
+Line:=00,
+Column:=09
+)
+LD    %MX5001
+CAL   COMP
+(
+OPERATOR:=5,
+FORMAT:=0,
+MODE:=WORD_MARKER,
+DATA1:=8001.000000,
+MODE:=PARAMETER,
+DATA2:=1011.000000,
+Page:=03,
+Line:=03,
+Column:=01
+)
+DUP
+STS   %QX3
+(
+Page:=03,
+Line:=05,
+Column:=09
+)
+DUP
+STS   %MX5003
+(
+Page:=03,
+Line:=04,
+Column:=09
+)
+STS   %QX2
+(
+Page:=03,
+Line:=03,
+Column:=09
+)
+LD    %MX5002
+LD    %MX5003
+ORS
+CAL   TON
+(
+PT:=1,
+ET:=8002,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=100,
+Page:=03,
+Line:=06,
+Column:=02
+)
+DUP
+STR   %MX5003
+(
+Page:=03,
+Line:=09,
+Column:=09
+)
+DUP
+STR   %MX5002
+(
+Page:=03,
+Line:=08,
+Column:=09
+)
+DUP
+STR   %MX5001
+(
+Page:=03,
+Line:=07,
+Column:=09
+)
+STR   %MX5000
+(
+Page:=03,
+Line:=06,
+Column:=09
+)
+
+(* PAGE 4 *)
+#     New Page
+LD    %MX5000
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=DRIVE_PARAMETER,
+DSTMODE:=WORD_MARKER,
+SRC:=36.00000,
+DST:=8001,
+Page:=04,
+Line:=00,
+Column:=01
+)
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=DRIVE_PARAMETER,
+DSTMODE:=PARAMETER,
+SRC:=36.00000,
+DST:=1012,
+Page:=04,
+Line:=00,
+Column:=04
+)
+ST    %MX5010
+
+(* PAGE 5 *)
+#     New Page
+LD    %IX3
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=PARAMETER,
+DSTMODE:=PARAMETER,
+SRC:=1013.00000,
+DST:=1011,
+Page:=05,
+Line:=00,
+Column:=01
+)
+ST    %MX5010
+LD    %IX4
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=PARAMETER,
+DSTMODE:=PARAMETER,
+SRC:=1014.00000,
+DST:=1011,
+Page:=05,
+Line:=02,
+Column:=01
+)
+ST    %MX5010
+LD    %IX5
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=PARAMETER,
+DSTMODE:=PARAMETER,
+SRC:=1015.00000,
+DST:=1011,
+Page:=05,
+Line:=04,
+Column:=01
+)
+ST    %MX5010
+LD    %IX6
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=PARAMETER,
+DSTMODE:=PARAMETER,
+SRC:=1016.00000,
+DST:=1011,
+Page:=05,
+Line:=06,
+Column:=01
+)
+ST    %MX5010
+
+(* Return to operational system *)
+RTS
