@@ -1,0 +1,31 @@
+WEG Ladder Programmer V11.11
+Copyright (C) 1999-2021 WEG. Todos os direitos reservados.
+
+***** INFORMAÇÕES SOBRE O COMPILADOR *****
+
+- Equipamento        : SRW01.PTC
+- Projeto            : TESTESRWF.LDD
+- Hora               : 10:47:26
+- Data               : Thursday, February 23, 2023
+- Tempo decorrido    : 0 segundo(s)
+
+***** INFORMAÇÕES DO PROGRAMA *****
+
+- Páginas         : 6
+- Lógicas         : 12
+- Elementos       : 45
+
+***** INFORMAÇÕES SOBRE OS ARQUIVOS *****
+
+- Caminho do projeto : c:\weg\wlp v11.11\projects\testesrwf  
+
+- Nome               : testesrwf.ldd
+- Hora               : 10:37:39
+- Data               : Thursday, February 23, 2023
+- Tamanho            : 2274 bytes
+
+- Nome               : work\testesrwf.bin
+- Hora               : 10:47:26
+- Data               : Thursday, February 23, 2023
+- Tamanho            : 1762 bytes
+

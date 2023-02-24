@@ -1,0 +1,9 @@
+WEG Ladder Programmer V11.11
+Copyright (C) 1999-2021 WEG. Todos os direitos reservados.
+
+Sintaxe da mensagem :
+Nome do arquivo (Página,Linha,Coluna) :
+Código : mensagem
+
+TESTESRWF.BIN - 0 erro(s), 0 advertência(s)
+- Tamanho do aplicativo : 1762 bytes

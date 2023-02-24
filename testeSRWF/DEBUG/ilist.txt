@@ -1,0 +1,222 @@
+(* WEG Ladder Programmer V11.11 *)
+(* Copyright (C) 1999-2021 WEG. Todos os direitos reservados. *)
+
+(* ***** LISTA DE INSTRU합ES ***** *)
+
+(* P핯INA 1 *)
+#     New Page
+LD    %IX1
+ANDN  %MX6121
+DUP
+STS   %MX6121
+(
+Page:=01,
+Line:=02,
+Column:=09
+)
+STS   %MX6120
+(
+Page:=01,
+Line:=01,
+Column:=09
+)
+LD    %MX6120
+CAL   TON
+(
+PT:=20,
+ET:=8200,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=01,
+Line:=06,
+Column:=04
+)
+DUP
+STR   %MX6120
+(
+Page:=01,
+Line:=07,
+Column:=09
+)
+STS   %MX6100
+(
+Page:=01,
+Line:=06,
+Column:=09
+)
+LD    %MX6100
+ST    %QX1
+LD    %MX6100
+CAL   TON
+(
+PT:=20,
+ET:=8200,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=01,
+Line:=10,
+Column:=04
+)
+DUP
+STR   %MX6100
+(
+Page:=01,
+Line:=11,
+Column:=09
+)
+STS   %MX6101
+(
+Page:=01,
+Line:=10,
+Column:=09
+)
+LD    %MX6101
+CAL   TON
+(
+PT:=20,
+ET:=8200,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=01,
+Line:=13,
+Column:=04
+)
+DUP
+STR   %MX6101
+(
+Page:=01,
+Line:=14,
+Column:=09
+)
+STS   %MX6102
+(
+Page:=01,
+Line:=13,
+Column:=09
+)
+
+(* P핯INA 2 *)
+#     New Page
+LD    %MX6102
+ST    %QX2
+LD    %MX6102
+CAL   TON
+(
+PT:=20,
+ET:=8200,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=02,
+Line:=03,
+Column:=04
+)
+DUP
+STR   %MX6102
+(
+Page:=02,
+Line:=04,
+Column:=09
+)
+STS   %MX6103
+(
+Page:=02,
+Line:=03,
+Column:=09
+)
+LD    %MX6103
+CAL   TON
+(
+PT:=20,
+ET:=8200,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=02,
+Line:=07,
+Column:=04
+)
+DUP
+STR   %MX6103
+(
+Page:=02,
+Line:=08,
+Column:=09
+)
+STS   %MX6104
+(
+Page:=02,
+Line:=07,
+Column:=09
+)
+LD    %MX6104
+AND   %MX6121
+CAL   TON
+(
+PT:=20,
+ET:=8225,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=02,
+Line:=10,
+Column:=04
+)
+DUP
+STR   %MX6104
+(
+Page:=02,
+Line:=11,
+Column:=09
+)
+STS   %MX6120
+(
+Page:=02,
+Line:=10,
+Column:=09
+)
+
+(* P핯INA 3 *)
+#     New Page
+LD    %MX6121
+CAL   TON
+(
+PT:=450,
+ET:=8800,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=03,
+Line:=01,
+Column:=04
+)
+STR   %MX6121
+(
+Page:=03,
+Line:=01,
+Column:=09
+)
+LDN   %MX6120
+ANDN  %MX6121
+STN   %MX6122
+LDN   %MX6122
+ANDN  %MX6100
+ANDN  %MX6101
+ANDN  %MX6102
+ANDN  %MX6103
+ST    %QX3
+
+(* P핯INA 4 *)
+#     New Page
+
+(* P핯INA 5 *)
+#     New Page
+
+(* P핯INA 6 *)
+#     New Page
+
+(* Retorno para o Sistema Operacional *)
+RTS

@@ -1,0 +1,104 @@
+(* WEG Ladder Programmer V11.11 *)
+(* Copyright (C) 1999-2021 WEG. Todos os direitos reservados. *)
+
+(* ***** INFORMA합ES PARA DEPURA플O ***** *)
+
+(* P핯INA 1 *)
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1, 1, 1) Contact
+( 1, 1, 3) Contact
+( 1, 2, 9) DUP
+( 1, 2, 9) Coil
+( 1, 1, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1, 6, 1) Contact
+( 1, 6, 4) Function Block
+( 1, 7, 9) DUP
+( 1, 7, 9) Coil
+( 1, 6, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1, 9, 1) Contact
+( 1, 9, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1,10, 1) Contact
+( 1,10, 4) Function Block
+( 1,11, 9) DUP
+( 1,11, 9) Coil
+( 1,10, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 1,-1,-1) LD    1
+( 1,13, 1) Contact
+( 1,13, 4) Function Block
+( 1,14, 9) DUP
+( 1,14, 9) Coil
+( 1,13, 9) Coil
+---------- End of Circuit
+
+(* P핯INA 2 *)
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 2, 1) Contact
+( 2, 2, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 3, 1) Contact
+( 2, 3, 4) Function Block
+( 2, 4, 9) DUP
+( 2, 4, 9) Coil
+( 2, 3, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2, 7, 1) Contact
+( 2, 7, 4) Function Block
+( 2, 8, 9) DUP
+( 2, 8, 9) Coil
+( 2, 7, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 2,-1,-1) LD    1
+( 2,10, 1) Contact
+( 2,10, 2) Contact
+( 2,10, 4) Function Block
+( 2,11, 9) DUP
+( 2,11, 9) Coil
+( 2,10, 9) Coil
+---------- End of Circuit
+
+(* P핯INA 3 *)
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 1, 1) Contact
+( 3, 1, 4) Function Block
+( 3, 1, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 6, 1) Contact
+( 3, 6, 2) Contact
+( 3, 6, 9) Coil
+---------- End of Circuit
+---------- Start of Circuit
+( 3,-1,-1) LD    1
+( 3, 9, 1) Contact
+( 3, 9, 2) Contact
+( 3, 9, 3) Contact
+( 3, 9, 4) Contact
+( 3, 9, 5) Contact
+( 3, 9, 9) Coil
+---------- End of Circuit
+
+(* P핯INA 4 *)
+
+(* P핯INA 5 *)
+
+(* P핯INA 6 *)
