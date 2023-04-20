@@ -1,12 +1,19 @@
 (* WEG Ladder Programmer V11.11 *)
-(* Copyright (C) 1999-2021 WEG. Todos os direitos reservados. *)
+(* Copyright (C) 1999-2021 WEG. All rights reserved. *)
 
-(* ***** LISTA DE INSTRU합ES ***** *)
+(* ***** INSTRUCTION LIST ***** *)
 
-(* P핯INA 1 *)
+(* PAGE 1 *)
 #     New Page
 LD    %IX1
 ANDN  %MX6121
+DUP
+STR   %QX4
+(
+Page:=01,
+Line:=03,
+Column:=09
+)
 DUP
 STS   %MX6121
 (
@@ -51,7 +58,7 @@ LD    %MX6100
 CAL   TON
 (
 PT:=20,
-ET:=8200,
+ET:=8201,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
@@ -75,8 +82,8 @@ Column:=09
 LD    %MX6101
 CAL   TON
 (
-PT:=20,
-ET:=8200,
+PT:=200,
+ET:=8202,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
@@ -98,7 +105,7 @@ Line:=13,
 Column:=09
 )
 
-(* P핯INA 2 *)
+(* PAGE 2 *)
 #     New Page
 LD    %MX6102
 ST    %QX2
@@ -106,7 +113,7 @@ LD    %MX6102
 CAL   TON
 (
 PT:=20,
-ET:=8200,
+ET:=8203,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
@@ -130,8 +137,8 @@ Column:=09
 LD    %MX6103
 CAL   TON
 (
-PT:=20,
-ET:=8200,
+PT:=200,
+ET:=8204,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
@@ -179,12 +186,12 @@ Line:=10,
 Column:=09
 )
 
-(* P핯INA 3 *)
+(* PAGE 3 *)
 #     New Page
 LD    %MX6121
 CAL   TON
 (
-PT:=450,
+PT:=5000,
 ET:=8800,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
@@ -199,6 +206,24 @@ Page:=03,
 Line:=01,
 Column:=09
 )
+LD    %MX6121
+CAL   TON
+(
+PT:=5000,
+ET:=8801,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=03,
+Line:=03,
+Column:=04
+)
+STR   %MX6201
+(
+Page:=03,
+Line:=03,
+Column:=09
+)
 LDN   %MX6120
 ANDN  %MX6121
 STN   %MX6122
@@ -209,14 +234,75 @@ ANDN  %MX6102
 ANDN  %MX6103
 ST    %QX3
 
-(* P핯INA 4 *)
+(* PAGE 4 *)
+#     New Page
+LD    %IX2
+ST    %MX6200
+(* Bobina fechada *)
+LD    %MX6100
+STR   %MX6201
+(
+Page:=04,
+Line:=05,
+Column:=09
+)
+(* Bobina aberta *)
+LD    %MX6102
+STS   %MX6201
+(
+Page:=04,
+Line:=07,
+Column:=09
+)
+LD    %MX6200
+AND   %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8220,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=04,
+Line:=10,
+Column:=05
+)
+STS   %QX4
+(
+Page:=04,
+Line:=10,
+Column:=09
+)
+LDN   %MX6200
+ANDN  %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8230,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=04,
+Line:=12,
+Column:=05
+)
+STS   %QX4
+(
+Page:=04,
+Line:=12,
+Column:=09
+)
+
+(* PAGE 5 *)
 #     New Page
 
-(* P핯INA 5 *)
+(* PAGE 6 *)
 #     New Page
 
-(* P핯INA 6 *)
+(* PAGE 7 *)
 #     New Page
 
-(* Retorno para o Sistema Operacional *)
+(* Return to operational system *)
 RTS
