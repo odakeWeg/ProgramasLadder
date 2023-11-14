@@ -1,30 +1,65 @@
 (* WEG Ladder Programmer V11.11 *)
-(* Copyright (C) 1999-2021 WEG. All rights reserved. *)
+(* Copyright (C) 1999-2021 WEG. Todos os direitos reservados. *)
 
-(* ***** INSTRUCTION LIST ***** *)
+(* ***** LISTA DE INSTRU합ES ***** *)
 
-(* PAGE 1 *)
+(* P핯INA 1 *)
 #     New Page
 LD    %IX1
 ANDN  %MX6121
 DUP
-STR   %QX4
+STR   %MX6803
+(
+Page:=01,
+Line:=07,
+Column:=09
+)
+DUP
+STR   %MX6802
+(
+Page:=01,
+Line:=06,
+Column:=09
+)
+DUP
+STR   %MX6801
+(
+Page:=01,
+Line:=05,
+Column:=09
+)
+DUP
+STR   %QX6
+(
+Page:=01,
+Line:=04,
+Column:=09
+)
+DUP
+STR   %QX5
 (
 Page:=01,
 Line:=03,
 Column:=09
 )
 DUP
-STS   %MX6121
+STR   %QX4
 (
 Page:=01,
 Line:=02,
 Column:=09
 )
-STS   %MX6120
+DUP
+STS   %MX6121
 (
 Page:=01,
 Line:=01,
+Column:=09
+)
+STS   %MX6120
+(
+Page:=01,
+Line:=00,
 Column:=09
 )
 LD    %MX6120
@@ -36,20 +71,20 @@ PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
 Page:=01,
-Line:=06,
+Line:=08,
 Column:=04
 )
 DUP
 STR   %MX6120
 (
 Page:=01,
-Line:=07,
+Line:=09,
 Column:=09
 )
 STS   %MX6100
 (
 Page:=01,
-Line:=06,
+Line:=08,
 Column:=09
 )
 LD    %MX6100
@@ -63,20 +98,20 @@ PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
 Page:=01,
-Line:=10,
+Line:=11,
 Column:=04
 )
 DUP
 STR   %MX6100
 (
 Page:=01,
-Line:=11,
+Line:=12,
 Column:=09
 )
 STS   %MX6101
 (
 Page:=01,
-Line:=10,
+Line:=11,
 Column:=09
 )
 LD    %MX6101
@@ -105,7 +140,7 @@ Line:=13,
 Column:=09
 )
 
-(* PAGE 2 *)
+(* P핯INA 2 *)
 #     New Page
 LD    %MX6102
 ST    %QX2
@@ -186,7 +221,7 @@ Line:=10,
 Column:=09
 )
 
-(* PAGE 3 *)
+(* P핯INA 3 *)
 #     New Page
 LD    %MX6121
 CAL   TON
@@ -234,10 +269,14 @@ ANDN  %MX6102
 ANDN  %MX6103
 ST    %QX3
 
-(* PAGE 4 *)
+(* P핯INA 4 *)
 #     New Page
 LD    %IX2
-ST    %MX6200
+ST    %MX6700
+LD    %IX3
+ST    %MX6701
+LD    %IX4
+ST    %MX6702
 (* Bobina fechada *)
 LD    %MX6100
 STR   %MX6201
@@ -254,7 +293,10 @@ Page:=04,
 Line:=07,
 Column:=09
 )
-LD    %MX6200
+
+(* P핯INA 5 *)
+#     New Page
+LD    %MX6700
 AND   %MX6201
 AND   %MX6121
 CAL   TON
@@ -264,17 +306,24 @@ ET:=8220,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
-Page:=04,
-Line:=10,
+Page:=05,
+Line:=01,
 Column:=05
+)
+DUP
+STS   %MX6801
+(
+Page:=05,
+Line:=02,
+Column:=09
 )
 STS   %QX4
 (
-Page:=04,
-Line:=10,
+Page:=05,
+Line:=01,
 Column:=09
 )
-LDN   %MX6200
+LDN   %MX6700
 ANDN  %MX6201
 AND   %MX6121
 CAL   TON
@@ -284,25 +333,191 @@ ET:=8230,
 PTMODE:=CONSTANT,
 ETMODE:=WORD_MARKER,
 TIMEBASE:=1,
-Page:=04,
+Page:=05,
+Line:=03,
+Column:=05
+)
+DUP
+STS   %MX6801
+(
+Page:=05,
+Line:=04,
+Column:=09
+)
+STS   %QX4
+(
+Page:=05,
+Line:=03,
+Column:=09
+)
+LD    %MX6701
+AND   %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8240,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=05,
+Line:=06,
+Column:=05
+)
+DUP
+STS   %MX6802
+(
+Page:=05,
+Line:=07,
+Column:=09
+)
+STS   %QX5
+(
+Page:=05,
+Line:=06,
+Column:=09
+)
+LDN   %MX6701
+ANDN  %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8250,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=05,
+Line:=08,
+Column:=05
+)
+DUP
+STS   %MX6802
+(
+Page:=05,
+Line:=09,
+Column:=09
+)
+STS   %QX5
+(
+Page:=05,
+Line:=08,
+Column:=09
+)
+LD    %MX6702
+AND   %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8260,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=05,
+Line:=11,
+Column:=05
+)
+DUP
+STS   %MX6803
+(
+Page:=05,
 Line:=12,
+Column:=09
+)
+STS   %QX6
+(
+Page:=05,
+Line:=11,
+Column:=09
+)
+LDN   %MX6702
+ANDN  %MX6201
+AND   %MX6121
+CAL   TON
+(
+PT:=100,
+ET:=8270,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=05,
+Line:=13,
+Column:=05
+)
+DUP
+STS   %MX6803
+(
+Page:=05,
+Line:=14,
+Column:=09
+)
+STS   %QX6
+(
+Page:=05,
+Line:=13,
+Column:=09
+)
+
+(* P핯INA 6 *)
+#     New Page
+LD    %MX6801
+CAL   TON
+(
+PT:=100,
+ET:=8320,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=06,
+Line:=01,
 Column:=05
 )
 STS   %QX4
 (
-Page:=04,
-Line:=12,
+Page:=06,
+Line:=01,
+Column:=09
+)
+LD    %MX6802
+CAL   TON
+(
+PT:=100,
+ET:=8330,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=06,
+Line:=04,
+Column:=05
+)
+STS   %QX4
+(
+Page:=06,
+Line:=04,
+Column:=09
+)
+LD    %MX6803
+CAL   TON
+(
+PT:=100,
+ET:=8340,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=06,
+Line:=07,
+Column:=05
+)
+STS   %QX4
+(
+Page:=06,
+Line:=07,
 Column:=09
 )
 
-(* PAGE 5 *)
+(* P핯INA 7 *)
 #     New Page
 
-(* PAGE 6 *)
-#     New Page
-
-(* PAGE 7 *)
-#     New Page
-
-(* Return to operational system *)
+(* Retorno para o Sistema Operacional *)
 RTS
